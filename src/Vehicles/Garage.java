@@ -32,11 +32,9 @@ public class Garage {
 
     }
 
-//    private static void garageBill(Car ford, Car ferrari, Car vauxhall, Bike ducati, Bike ducati2, Bike ducati3, Plane cessna) {
     private static void garageBill(Vehicle... garageVehicles) {
         int totalBill = 0;
-//        Vehicle[] garageVehicles = {ford, ferrari, vauxhall, ducati, ducati2, ducati3, cessna};
-//        for (Vehicle vehicle : garageVehicles){
+
         for (Vehicle vehicle : garageVehicles){
 
             int cost = vehicle.getBill();
