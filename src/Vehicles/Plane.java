@@ -1,11 +1,14 @@
 package Vehicles;
 
-public class Plane extends Vehicle{
+import abstraction.Flyable;
+
+public class Plane extends Vehicle implements Flyable{
     private boolean hasWings;
 
     public Plane(String make, String model, String colour, int speed, int numbDoors, boolean hasWings) {
         super(make, model, colour, speed, numbDoors);
         this.hasWings = hasWings;
+
     }
 
     public Plane(boolean hasWings) {
@@ -31,6 +34,12 @@ public class Plane extends Vehicle{
                 ", hasWings=" + hasWings +
                 '}';
     }
+
+    @Override
+    public void fly() {
+        System.out.println("I can Fly!!! It's a Plane!!!");
+    }
+
 
     @Override
     public int getBill() {

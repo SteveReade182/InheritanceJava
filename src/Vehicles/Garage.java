@@ -27,6 +27,8 @@ public class Garage {
 //        System.out.println(cessna);
 
 
+
+
         garageBill(ford, ferrari, vauxhall, ducati, ducati2, ducati3, cessna);
 
 
@@ -40,6 +42,8 @@ public class Garage {
             int cost = vehicle.getBill();
             totalBill += cost;
             System.out.println(vehicle.getMake() + " Total cost: £" + cost);
+
+
         }
         System.out.println();
         System.out.println("Total Bill: " + totalBill);

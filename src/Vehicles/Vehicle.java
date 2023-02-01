@@ -1,8 +1,8 @@
 package Vehicles;
 
-import abstraction.Refuelable;
+import abstraction.Flyable;
 
-public class Vehicle implements Refuelable {
+public abstract class Vehicle {
     private String make;
     private String model;
     private String colour = "black";
@@ -21,15 +21,6 @@ public class Vehicle implements Refuelable {
         this.numDoors = numbDoors;
     }
 
-    @Override
-    public void refuel(int fuel) {
-        this.fuel += fuel;
-    }
-
-    @Override
-    public void refuel() {
-        this.fuel = 40;
-    }
 
     public String getMake() {
         return make;
@@ -80,7 +71,5 @@ public class Vehicle implements Refuelable {
                 '}';
     }
 
-    public int getBill(){
-        return 0;
-    }
+    public abstract int getBill();
 }
