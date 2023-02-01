@@ -1,11 +1,14 @@
 package Vehicles;
 
-public class Vehicle {
+import abstraction.Refuelable;
+
+public class Vehicle implements Refuelable {
     private String make;
     private String model;
     private String colour = "black";
     private int speed;
     private int numDoors;
+    private int fuel;
 
     public Vehicle(){
         super();
@@ -17,6 +20,17 @@ public class Vehicle {
         this.speed = speed;
         this.numDoors = numbDoors;
     }
+
+    @Override
+    public void refuel(int fuel) {
+        this.fuel += fuel;
+    }
+
+    @Override
+    public void refuel() {
+        this.fuel = 40;
+    }
+
     public String getMake() {
         return make;
     }
