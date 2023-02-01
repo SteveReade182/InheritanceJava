@@ -32,4 +32,8 @@ public class Bike extends Vehicle{
                 '}';
     }
 
+    @Override
+    public int getBill() {
+        return 100;
+    }
 }

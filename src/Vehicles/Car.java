@@ -31,4 +31,9 @@ public class Car extends Vehicle{
                 ", bootOpen=" + bootOpen +
                 '}';
     }
+
+    @Override
+    public int getBill() {
+        return  250;
+    }
 }

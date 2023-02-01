@@ -32,4 +32,8 @@ public class Plane extends Vehicle{
                 '}';
     }
 
+    @Override
+    public int getBill() {
+        return (! hasWings) ? 10000:1000;
+    }
 }

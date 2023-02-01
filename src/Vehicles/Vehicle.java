@@ -65,4 +65,8 @@ public class Vehicle {
                 ", numDoors=" + numDoors +
                 '}';
     }
+
+    public int getBill(){
+        return 0;
+    }
 }

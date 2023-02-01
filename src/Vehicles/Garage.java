@@ -34,27 +34,16 @@ public class Garage {
 
 //    private static void garageBill(Car ford, Car ferrari, Car vauxhall, Bike ducati, Bike ducati2, Bike ducati3, Plane cessna) {
     private static void garageBill(Vehicle... garageVehicles) {
-
+        int totalBill = 0;
 //        Vehicle[] garageVehicles = {ford, ferrari, vauxhall, ducati, ducati2, ducati3, cessna};
 //        for (Vehicle vehicle : garageVehicles){
         for (Vehicle vehicle : garageVehicles){
 
-            int totalCost = 0;
-
-            if (vehicle instanceof Car){
-                totalCost += 250;
-            } else if (vehicle instanceof Bike){
-                totalCost += 150;
-                if (((Bike) vehicle).getHasSideCar()){
-                    totalCost += 400;
-                }
-            } else if (vehicle instanceof  Plane){
-                totalCost += 1000;
-                if (!((Plane) vehicle).getHasWings()){
-                    totalCost += 10000;
-                }
-            }
-            System.out.println(((Vehicle) vehicle).getMake() + " Total cost: £" + totalCost);
+            int cost = vehicle.getBill();
+            totalBill += cost;
+            System.out.println(vehicle.getMake() + " Total cost: £" + cost);
         }
+        System.out.println();
+        System.out.println("Total Bill: " + totalBill);
     }
 }
