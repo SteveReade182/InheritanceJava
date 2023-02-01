@@ -32,9 +32,13 @@ public class Garage {
 
     }
 
-    private static void garageBill(Car ford, Car ferrari, Car vauxhall, Bike ducati, Bike ducati2, Bike ducati3, Plane cessna) {
-        Vehicle[] garageVehicles = {ford, ferrari, vauxhall, ducati, ducati2, ducati3, cessna};
-        for (Object vehicle : garageVehicles){
+//    private static void garageBill(Car ford, Car ferrari, Car vauxhall, Bike ducati, Bike ducati2, Bike ducati3, Plane cessna) {
+    private static void garageBill(Vehicle... garageVehicles) {
+
+//        Vehicle[] garageVehicles = {ford, ferrari, vauxhall, ducati, ducati2, ducati3, cessna};
+//        for (Vehicle vehicle : garageVehicles){
+        for (Vehicle vehicle : garageVehicles){
+
             int totalCost = 0;
 
             if (vehicle instanceof Car){
@@ -46,7 +50,7 @@ public class Garage {
                 }
             } else if (vehicle instanceof  Plane){
                 totalCost += 1000;
-                if (((Plane) vehicle).getHasWings() == false){
+                if (!((Plane) vehicle).getHasWings()){
                     totalCost += 10000;
                 }
             }
